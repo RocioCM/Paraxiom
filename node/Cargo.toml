@@ -18,6 +18,7 @@ jsonrpsee = { version = "0.16.2", features = ["server"] }
 
 # Local
 paraxiom-runtime = { path = "../runtime/paraxiom" }
+pallet-democracy = { path = "../pallets/democracy", default-features = false }
 
 # Substrate
 frame-benchmarking = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
