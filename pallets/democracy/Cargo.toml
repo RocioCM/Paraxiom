@@ -18,19 +18,19 @@ codec = { package = "parity-scale-codec", version = "3.0.0", default-features = 
 ] }
 scale-info = { version = "2.1.1", default-features = false, features = ["derive"] }
 serde = { version = "1.0.136", features = ["derive"], optional = true }
-frame-benchmarking = { version = "4.0.0-dev", default-features = false, optional = true, path = "../benchmarking" }
-frame-support = { version = "4.0.0-dev", default-features = false, path = "../support" }
-frame-system = { version = "4.0.0-dev", default-features = false, path = "../system" }
-sp-io = { version = "7.0.0", default-features = false, path = "../../primitives/io" }
-sp-runtime = { version = "7.0.0", default-features = false, path = "../../primitives/runtime" }
-sp-std = { version = "5.0.0", default-features = false, path = "../../primitives/std" }
-sp-core = { version = "7.0.0", default-features = false, path = "../../primitives/core" }
+frame-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true, branch = "polkadot-v0.9.37" }
+frame-support = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+frame-system = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+sp-io = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+sp-std = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+sp-core = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
 log = { version = "0.4.17", default-features = false }
 
 [dev-dependencies]
-pallet-balances = { version = "4.0.0-dev", path = "../balances" }
-pallet-scheduler = { version = "4.0.0-dev", path = "../scheduler" }
-pallet-preimage = { version = "4.0.0-dev", path = "../preimage" }
+pallet-balances = { git = "https://github.com/paritytech/substrate",  branch = "polkadot-v0.9.37" }
+pallet-scheduler = { git = "https://github.com/paritytech/substrate",  branch = "polkadot-v0.9.37" }
+pallet-preimage = { git = "https://github.com/paritytech/substrate",  branch = "polkadot-v0.9.37" }
 
 [features]
 default = ["std"]
