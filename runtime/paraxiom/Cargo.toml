@@ -24,8 +24,9 @@ smallvec = "1.10.0"
 # Local
 pallet-registry = { path = "../../pallets/registry", default-features = false }
 pallet-democracy = { path = "../../pallets/democracy", default-features = false }
-#para-oracle = { package = 'para-oracle', path = '../../pallets/para-oracle', default-features = false }
 phat-offchain-rollup = { path = "../../pallets/offchain-rollup", default-features = false }
+pallet-oracle = { path = "../../pallets/oracle", default-features = false }
+
 # Substrate
 frame-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true, branch = "polkadot-v0.9.37" }
 frame-executive = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
@@ -55,7 +56,6 @@ sp-session = { git = "https://github.com/paritytech/substrate", default-features
 sp-std = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
 sp-transaction-pool = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
 sp-version = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
-#pallet-membership = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false }
 
 # Polkadot
 pallet-xcm = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.37" }
@@ -70,10 +70,6 @@ pallet-contracts = { git = "https://github.com/paritytech/substrate", package = 
 pallet-contracts-primitives = { git = "https://github.com/paritytech/substrate", package = "pallet-contracts-primitives", default-features = false, branch = "polkadot-v0.9.37" }
 pallet-randomness-collective-flip = { git = "https://github.com/paritytech/substrate",  default-features = false, branch = "polkadot-v0.9.37" }
 pallet-assets ={ git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
-
-
-
-
 
 # Cumulus
 cumulus-pallet-aura-ext = { git = "https://github.com/paritytech/cumulus", default-features = false, branch = "polkadot-v0.9.37" }
@@ -146,8 +142,7 @@ std = [
 	"pallet-democracy/std",
 	"pallet-preimage/std",
 	"pallet-scheduler/std",
-	#"pallet-membership/std",
-	#"para-oracle/std",
+	"pallet-oracle/std",
 ]
 
 runtime-benchmarks = [
@@ -166,9 +161,7 @@ runtime-benchmarks = [
 	"cumulus-pallet-xcmp-queue/runtime-benchmarks",
 	"pallet-registry/runtime-benchmarks",
 	"pallet-democracy/runtime-benchmarks",
-	#"pallet-membership/runtime-benchmarks",
-	#"para-oracle/runtime-benchmarks",
-
+	#"pallet-oracle/runtime-benchmarks",
 ]
 
 try-runtime = [
@@ -192,6 +185,5 @@ try-runtime = [
 	"parachain-info/try-runtime",
 	"pallet-registry/try-runtime",
 	"pallet-democracy/try-runtime",
-	#"pallet-membership/try-runtime",
-	#"para-oracle/try-runtime",
+	"pallet-oracle/try-runtime",
 ]
