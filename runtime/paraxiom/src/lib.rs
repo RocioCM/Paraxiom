@@ -565,7 +565,7 @@ parameter_types! {
 }
 
 impl pallet_preimage::Config for Runtime {
-    type WeightInfo = pallet_preimage::weights::SubstrateWeight<Runtime>;;
+    type WeightInfo = pallet_preimage::weights::SubstrateWeight<Runtime>;
     type RuntimeEvent = RuntimeEvent;
     type Currency = Balances;
     type ManagerOrigin = EnsureRoot<AccountId>;
