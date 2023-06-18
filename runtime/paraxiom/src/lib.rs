@@ -130,8 +130,8 @@ pub type Executive = frame_executive::Executive<
     AllPalletsWithSystem,
 >;
 
-use phat_offchain_rollup::anchor as pallet_anchor;
 use pallet_oracle;
+use phat_offchain_rollup::anchor as pallet_anchor;
 
 /// Handles converting a weight scalar to a fee value, based on the scale and granularity of the
 /// node's balance type.
@@ -591,6 +591,8 @@ impl pallet_scheduler::Config for Runtime {
     type OriginPrivilegeCmp = EqualPrivilegeOnly;
 }
 
+impl para_democracy::Config for Runtime {}
+
 parameter_types! {
     pub const LaunchPeriod: BlockNumber = 28 * DAYS;
     pub const VotingPeriod: BlockNumber = 28 * DAYS;
@@ -699,7 +701,7 @@ construct_runtime!(
         //Democracy
         Democracy: pallet_democracy = 60,
         Scheduler: pallet_scheduler = 61,
-		Preimage: pallet_preimage = 62,
+        Preimage: pallet_preimage = 62,
 
         // Oracle Pallets
         // OracleProvider: pallet_membership::<Instance1>::{Pallet, Call, Storage, Event<T>} = 41,

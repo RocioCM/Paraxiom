@@ -25,6 +25,7 @@ smallvec = "1.10.0"
 pallet-registry = { path = "../../pallets/registry", default-features = false }
 phat-offchain-rollup = { path = "../../pallets/offchain-rollup", default-features = false }
 pallet-oracle = { path = "../../pallets/oracle", default-features = false }
+para-democracy = { path = "../../pallets/para-democracy", default-features = false }
 
 # Substrate
 frame-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true, branch = "polkadot-v0.9.37" }
